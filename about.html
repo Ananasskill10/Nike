@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>О нас — Air Jordan</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="wrap">
+      <div style="display:flex;align-items:center;gap:18px">
+        <div class="logo">AIR JORDAN</div>
+        <nav class="nav">
+          <a href="index.html">Главная</a>
+          <a href="gallery.html">Галерея</a>
+          <a href="about.html" class="active">О нас</a>
+          <a href="contact.html">Контакты</a>
+        </nav>
+      </div>
+      <div class="nav">
+        <a href="#" class="btn ghost" onclick="openSearch()">Поиск</a>
+        <a href="cart.html" class="btn">Корзина</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container" style="text-align:center;max-width:900px;">
+        <h1>О бренде Air Jordan</h1>
+        <p>Air Jordan — это не просто кроссовки. Это символ уверенности, скорости и свободы.  
+          Созданный Майклом Джорданом и Nike в 1984 году, бренд стал легендой уличной культуры и спорта.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:20px;justify-content:center;margin-top:30px;">
+          <div class="card" style="width:260px;">
+            <div class="img"><img src="https://sneakerbardetroit.com/wp-content/uploads/2020/02/Air-Jordan-1-High-OG-85-BQ4422-600-1.jpg" alt=""></div>
+            <div class="meta">
+              <h3>Air Jordan 1</h3>
+              <p>Первая модель, нарушившая правила NBA и создавшая новую эпоху стиля.</p>
+            </div>
+          </div>
+          <div class="card" style="width:260px;">
+            <div class="img"><img src="https://i.ebayimg.com/images/g/9MoAAOSwirZnK6s6/s-l1600.jpg" alt=""></div>
+            <div class="meta">
+              <h3>Air Jordan 4</h3>
+              <p>Легендарная модель, принесшая комфорт и прочность на новый уровень.</p>
+            </div>
+          </div>
+          <div class="card" style="width:260px;">
+            <div class="img"><img src="https://i.pinimg.com/736x/8f/56/56/8f565670a6177a6bb6496f0ef990fd29.jpg" alt=""></div>
+            <div class="meta">
+              <h3>Современные коллаборации</h3>
+              <p>Новая коллаборация с легендарным аниме Ван пис.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div>©️ 2025 Air Jordan</div>
+    </div>
+  </footer>
+</body>
+</html>
+<script src="script.js"></script>
+<div class="search-overlay" id="searchOverlay">
+  <div class="search-box">
+    <input type="text" id="searchInput" placeholder="Ищите по названию...">
+    <button onclick="closeSearch()">Закрыть</button>
+  </div>
+</div>
+
+<script>
+  function openSearch() {
+    document.getElementById('searchOverlay').style.display = 'flex';
+    document.getElementById('searchInput').focus();
+  }
+
+  function closeSearch() {
+    document.getElementById('searchOverlay').style.display = 'none';
+  }
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeSearch();
+  });
+</script>

@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Контакты — Air Jordan</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="wrap">
+      <div style="display:flex;align-items:center;gap:18px">
+        <div class="logo">AIR JORDAN</div>
+        <nav class="nav">
+          <a href="index.html">Главная</a>
+          <a href="gallery.html">Галерея</a>
+          <a href="about.html">О нас</a>
+          <a href="contact.html" class="active">Контакты</a>
+        </nav>
+      </div>
+      <div class="nav">
+        <a href="#" class="btn ghost" onclick="openSearch()">Поиск</a>
+        <a href="cart.html" class="btn">Корзина</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container" style="text-align:center;">
+        <h1>Свяжитесь с нами</h1>
+        <p>Мы всегда рады помочь вам с выбором, заказом и любыми вопросами.</p>
+        <p><b>Email:</b> anvaramutov@gmail.com</p>
+        <p><b>Телефон:</b> +7 (777) 091 20 74</p>
+        <p><b>Адрес:</b> г. Алматы, ул. Таусогар 60</p>
+
+        <div style="max-width:400px;margin:40px auto 0;">
+          <input type="text" placeholder="Ваше имя" style="width:100%;padding:12px;margin:8px 0;border-radius:6px;border:none;">
+          <input type="email" placeholder="Ваш email" style="width:100%;padding:12px;margin:8px 0;border-radius:6px;border:none;">
+          <textarea placeholder="Ваше сообщение" rows="4" style="width:100%;padding:12px;margin:8px 0;border-radius:6px;border:none;"></textarea>
+          <button class="btn" style="width:100%;">Отправить</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div>©️ 2025 Air Jordan</div>
+    </div>
+  </footer>
+</body>
+</html>
+<script src="script.js"></script>
+<div class="search-overlay" id="searchOverlay">
+  <div class="search-box">
+    <input type="text" id="searchInput" placeholder="Ищите по названию...">
+    <button onclick="closeSearch()">Закрыть</button>
+  </div>
+</div>
+
+<script>
+  function openSearch() {
+    document.getElementById('searchOverlay').style.display = 'flex';
+    document.getElementById('searchInput').focus();
+  }
+
+  function closeSearch() {
+    document.getElementById('searchOverlay').style.display = 'none';
+  }
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeSearch();
+  });
+</script>

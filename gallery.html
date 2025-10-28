@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Галерея моделей — Air Jordan</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <header class="header">
+    <div class="wrap">
+      <div style="display:flex;align-items:center;gap:18px">
+        <div class="logo">AIR JORDAN</div>
+        <nav class="nav">
+          <a href="index.html">Главная</a>
+          <a class="active" href="gallery.html">Галерея</a>
+          <a href="about.html">О нас</a>
+          <a href="contact.html">Контакты</a>
+        </nav>
+      </div>
+      <div class="nav">
+        <a href="#" class="btn ghost" onclick="openSearch()">Поиск</a>
+        <a href="cart.html" class="btn">Корзина</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container">
+      <div class="kicker">Наши коллекции</div>
+      <h2>Галерея моделей Air Jordan</h2>
+
+      <h3 style="color:var(--accent); margin-top:40px;">Продаются</h3>
+      <div class="products-grid">
+        <div class="card">
+          <div class="img"><img src="https://i.ebayimg.com/images/g/gN4AAOSwwcNoECCM/s-l1600.jpg" alt="Air Jordan 1 Retro"></div>
+          <div class="meta">
+            <h3>Air Jordan 1 Retro</h3>
+            <p>Классическая пара, доступная сейчас.</p>
+            <div class="price-row">
+              <div class="price">₸89 990</div>
+              <button class="btn add-btn"
+                data-name="Air Jordan 1 Retro"
+                data-price="89990"
+                data-img="https://i.ebayimg.com/images/g/gN4AAOSwwcNoECCM/s-l1600.jpg">
+                В корзину
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="img"><img src="https://avatars.mds.yandex.net/i?id=cd42f4196661cc82858b67c4ce748ec6e5a1c3ba-5236613-images-thumbs&n=13" alt="Air Jordan 4 Retro"></div>
+          <div class="meta">
+            <h3>Air Jordan 4 Retro</h3>
+            <p>Доступная классика конца 80-х.</p>
+            <div class="price-row">
+              <div class="price">₸119 990</div>
+              <button class="btn add-btn"
+                data-name="Air Jordan 4 Retro"
+                data-price="119990"
+                data-img="https://avatars.mds.yandex.net/i?id=cd42f4196661cc82858b67c4ce748ec6e5a1c3ba-5236613-images-thumbs&n=13">
+                В корзину
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h3 style="color:var(--accent); margin-top:60px;">Коллаборации</h3>
+      <div class="products-grid">
+        <div class="card">
+          <div class="img"><img src="https://cdn1.ozone.ru/s3/multimedia-m/6470195770.jpg" alt="Air Jordan x Off-White"></div>
+          <div class="meta">
+            <h3>Air Jordan 1 x Off-White</h3>
+            <p>Коллаборация с Virgil Abloh, лимитированная.</p>
+            <div class="price-row">
+              <div class="price">₸249 990</div>
+              <button class="btn add-btn"
+                data-name="Air Jordan 1 x Off-White"
+                data-price="249990"
+                data-img="https://cdn1.ozone.ru/s3/multimedia-m/6470195770.jpg">
+                В корзину
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="img"><img src="https://n.cdn.cdek.shopping/images/shopping/byzkSbBrtQo7xgum.jpg?v=1" alt="Air Jordan x Travis Scott"></div>
+          <div class="meta">
+            <h3>Air Jordan 4 x Travis Scott</h3>
+            <p>Эксклюзивный релиз с музыкантом.</p>
+            <div class="price-row">
+              <div class="price">₸299 990</div>
+              <button class="btn add-btn"
+                data-name="Air Jordan 4 x Travis Scott"
+                data-price="299990"
+                data-img="https://n.cdn.cdek.shopping/images/shopping/byzkSbBrtQo7xgum.jpg?v=1">
+                В корзину
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h3 style="color:var(--accent); margin-top:60px;">Спортивные</h3>
+      <div class="products-grid">
+        <div class="card">
+          <div class="img"><img src="https://i.pinimg.com/originals/3f/9f/7d/3f9f7d5389a6ba00e9cb84053b28d6d3.jpg" alt="Air Jordan 33 Free Throw"></div>
+          <div class="meta">
+            <h3>Air Jordan 33 Free Throw</h3>
+            <p>Технологичные баскетбольные кроссовки для игры.</p>
+            <div class="price-row">
+              <div class="price">₸159 990</div>
+              <button class="btn add-btn"
+                data-name="Air Jordan 33 Free Throw"
+                data-price="159990"
+                data-img="https://i.pinimg.com/originals/3f/9f/7d/3f9f7d5389a6ba00e9cb84053b28d6d3.jpg">
+                В корзину
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="img"><img src="https://avatars.mds.yandex.net/i?id=1a00cc2593303ec4a6db78c61467396b_l-3751575-images-thumbs&n=13" alt="Air Jordan XXXV"></div>
+          <div class="meta">
+            <h3>Air Jordan XXXV</h3>
+            <p>Современная модель для баскетбола и тренинга.</p>
+            <div class="price-row">
+              <div class="price">₸179 990</div>
+              <button class="btn add-btn"
+                data-name="Air Jordan XXXV"
+                data-price="179990"
+                data-img="https://avatars.mds.yandex.net/i?id=1a00cc2593303ec4a6db78c61467396b_l-3751575-images-thumbs&n=13">
+                В корзину
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">©️ 2025 Air Jordan — демо</div>
+  </footer>
+
+  <script>
+    const buttons = document.querySelectorAll(".add-btn");
+
+    function getCart() {
+      try {
+        return JSON.parse(localStorage.getItem("cart")) || [];
+      } catch {
+        return [];
+      }
+    }
+
+    function saveCart(cart) {
+      localStorage.setItem("cart", JSON.stringify(cart));
+    }
+
+    function isInCart(name) {
+      const cart = getCart();
+      return cart.some(item => item.name === name);
+    }
+
+    function updateButtons() {
+      buttons.forEach(btn => {
+        const name = btn.dataset.name;
+        if (isInCart(name)) {
+          btn.textContent = "Добавлено";
+          btn.disabled = true;
+          btn.style.background = "#222";
+          btn.style.cursor = "default";
+        }
+      });
+    }
+
+    buttons.forEach(btn => {
+      btn.addEventListener("click", () => {
+        const name = btn.dataset.name;
+        const price = btn.dataset.price;
+        const img = btn.dataset.img;
+
+        const cart = getCart();
+        if (!isInCart(name)) {
+          cart.push({ name, price, img });
+          saveCart(cart);
+        }
+
+        btn.textContent = "Добавлено";
+        btn.disabled = true;
+        btn.style.background = "#222";
+        btn.style.cursor = "default";
+      });
+    });
+
+    document.addEventListener("DOMContentLoaded", updateButtons);
+  </script>
+</body>
+</html>
+  <script src="script.js"></script>
+  <div class="search-overlay" id="searchOverlay">
+  <div class="search-box">
+    <input type="text" id="searchInput" placeholder="Ищите по названию...">
+    <button onclick="closeSearch()">Закрыть</button>
+  </div>
+</div>
+
+<script>
+  function openSearch() {
+    document.getElementById('searchOverlay').style.display = 'flex';
+    document.getElementById('searchInput').focus();
+  }
+
+  function closeSearch() {
+    document.getElementById('searchOverlay').style.display = 'none';
+  }
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeSearch();
+  });
+</script>
