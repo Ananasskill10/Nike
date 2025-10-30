@@ -21,7 +21,7 @@ html, body {
   background: url("assets/images/739c66ae-3895-43d9-9b34-a9075f664fce.png") no-repeat center center;
   background-size: cover;
   background-color: var(--bg);
-  color: #00;
+  color: #0000;
   font-family: "Inter", Poppins, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -412,6 +412,10 @@ html, body {
   from { transform: scale(0.9); opacity: 0; }
   to { transform: scale(1); opacity: 1); }
 }
+* {
+  color: #000 !important;
+}
+
 
 
 
