@@ -20,7 +20,7 @@ html, body {
   flex-direction: column;
   background: url("assets/images/739c66ae-3895-43d9-9b34-a9075f664fce.png") no-repeat center center;
   background-size: cover;
-  background-color: var(--bg);
+  background-color: 0000;
   color: #fff;
   font-family: "Inter", Poppins, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
   -webkit-font-smoothing: antialiased;
@@ -415,6 +415,7 @@ html, body {
 * {
   color: #000 !important;
 }
+
 
 
 
