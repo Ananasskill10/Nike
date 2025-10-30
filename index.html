@@ -7,34 +7,28 @@
   <link rel="stylesheet" href="./style.css">
   <link rel="shortcut icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQel9IhE78-ozdbUGRUoou6fHK9w2HzVb_Btg&s" type="image/x-icon">
 </head>
-
 <body>
   <header class="header">
     <div class="wrap">
-      <div class="left">
+      <div style="display:flex;align-items:center;gap:18px">
         <div class="logo">AIR JORDAN</div>
-        <nav class="nav desktop">
+        <nav class="nav">
           <a href="index.html">Главная</a>
           <a href="gallery.html">Галерея</a>
           <a href="about.html">О нас</a>
           <a href="contact.html">Контакты</a>
         </nav>
       </div>
-
-      <button class="burger" onclick="document.body.classList.toggle('open')">☰</button>
-
-      <nav class="nav mobile">
-        <a href="index.html">Главная</a>
-        <a href="gallery.html">Галерея</a>
-        <a href="about.html">О нас</a>
-        <a href="contact.html">Контакты</a>
-      </nav>
+      <div class="nav">
+        <a href="#" class="btn ghost" onclick="openSearch()">Поиск</a>
+        <a href="cart.html" class="btn">Корзина</a>
+      </div>
     </div>
   </header>
 
   <main>
     <section class="hero">
-      <div class="wrap hero-wrap">
+      <div class="wrap">
         <div>
           <div class="kicker">Новая коллекция</div>
           <h1>Air Jordan — культовые модели</h1>
@@ -44,44 +38,38 @@
             <button class="btn ghost" onclick="location.href='about.html'">Кто мы такие</button>
           </div>
         </div>
-
-        <div class="hero-imgs">
-          <div class="card big">
+        <div style="display:flex;flex-direction:column;gap:14px;align-items:flex-end">
+          <div style="width:520px" class="card">
             <div class="img">
               <img src="https://i.pinimg.com/originals/a2/7f/c9/a27fc9473db9c0dfacaeb5deae4ad109.jpg" alt="hero">
             </div>
           </div>
-
-          <div class="small-cards">
-            <div class="card">
-              <div class="img">
-                <img src="https://ir.ozone.ru/s3/multimedia-3/w1200/6643440651.jpg" alt="">
-              </div>
+          <div style="display:flex;gap:12px;width:100%;justify-content:flex-end">
+            <div class="card" style="width:260px">
+              <div class="img"><img src="https://ir.ozone.ru/s3/multimedia-3/w1200/6643440651.jpg" alt=""></div>
             </div>
-            <div class="card">
-              <div class="img">
-                <img src="https://cdn1.ozone.ru/s3/multimedia-h/c600/6509697341.jpg" alt="">
-              </div>
+            <div class="card" style="width:260px">
+              <div class="img"><img src="https://cdn1.ozone.ru/s3/multimedia-h/c600/6509697341.jpg" alt=""></div>
             </div>
           </div>
         </div>
-
       </div>
     </section>
 
     <section class="section">
       <div class="container">
-        <div class="section-top">
+        <div style="display:flex;justify-content:space-between;align-items:end">
           <div>
             <div class="kicker">Популярное</div>
-            <h2>Модели и цены</h2>
+            <h2 style="margin:4px 0 0">Модели и цены</h2>
           </div>
           <div>
             <button class="btn ghost" onclick="location.href='gallery.html'">Смотреть все</button>
           </div>
         </div>
 
-        <div class="products-grid" id="productsGrid"></div>
+        <div class="products-grid" id="productsGrid">
+        </div>
       </div>
     </section>
   </main>
@@ -93,17 +81,8 @@
     </div>
   </footer>
 
-  <!-- ✅ Перенес внутрь body -->
-  <div class="search-overlay" id="searchOverlay">
-    <div class="search-box">
-      <input type="text" id="searchInput" placeholder="Ищите по названию...">
-      <button onclick="closeSearch()">Закрыть</button>
-    </div>
-  </div>
-
   <script src="script.js"></script>
-
-  <script>
+ <script>
   const PRODUCTS = [
     {id:'j1', title:'Air Jordan 1 Retro', price:'₸89 990', img:'https://i.ebayimg.com/images/g/gN4AAOSwwcNoECCM/s-l1600.jpg'},
     {id:'j4', title:'Air Jordan 4 Retro', price:'₸119 990', img:'https://avatars.mds.yandex.net/i?id=cd42f4196661cc82858b67c4ce748ec6e5a1c3ba-5236613-images-thumbs&n=13'},
@@ -111,23 +90,51 @@
   ];
 
   const grid = document.getElementById('productsGrid');
+
   PRODUCTS.forEach(p => {
-    grid.innerHTML += `
-      <div class="card">
-        <div class="img"><img src="${p.img}"></div>
-        <div class="meta">
-          <h3>${p.title}</h3>
-          <p>Классическая модель – отличный выбор для спорта и стиля</p>
-          <div class="price-row">
-            <div class="price">${p.price}</div>
-            <div><button class="btn">Подробнее</button></div>
+    const el = document.createElement('div');
+    el.className = 'card';
+    el.innerHTML = `
+      <div class="img"><img src="${p.img}" alt="${p.title}"></div>
+      <div class="meta">
+        <h3>${p.title}</h3>
+        <p>Классическая модель – отличный выбор для спорта и стиля</p>
+        <div class="price-row">
+          <div class="price">${p.price}</div>
+          <div>
+            <button class="btn" onclick="openProduct('${p.id}')">Подробнее</button>
           </div>
-        </div>`;
+        </div>
+      </div>`;
+    grid.appendChild(el);
   });
 
-  function openSearch(){searchOverlay.style.display="flex";searchInput.focus()}
-  function closeSearch(){searchOverlay.style.display="none"}
-  </script>
+  function openProduct(id) {
+    window.location.href = "gallery.html";
+  }
+</script>
 
 </body>
 </html>
+<div class="search-overlay" id="searchOverlay">
+  <div class="search-box">
+    <input type="text" id="searchInput" placeholder="Ищите по названию...">
+    <button onclick="closeSearch()">Закрыть</button>
+  </div>
+</div>
+
+<script>
+  function openSearch() {
+    document.getElementById('searchOverlay').style.display = 'flex';
+    document.getElementById('searchInput').focus();
+  }
+
+  function closeSearch() {
+    document.getElementById('searchOverlay').style.display = 'none';
+  }
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeSearch();
+  });
+</script>
+
